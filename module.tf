@@ -1,5 +1,5 @@
 resource "azurerm_windows_virtual_machine" "vm" {
-  name                  = "malicious change"
+  name                  = local.vm-name 
   location              = var.location
   resource_group_name   = local.resource_group_name
   size                  = var.windows_VM.vm_size
